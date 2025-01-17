@@ -2,7 +2,7 @@ BIMV2190 – DevOps
 Examen janvier 2025
 
 Projet de Ngoma Umba Tamalie S.
-Url Github https://
+https://github.com/tamalie-ngomaUmba-vinci/IPL-social.git
 
 Ce projet reprends mes réponses personnelles aux questions suivantes : 
 
