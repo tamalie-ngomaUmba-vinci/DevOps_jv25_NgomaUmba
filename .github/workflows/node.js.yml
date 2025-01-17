@@ -23,6 +23,10 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+      
+    - name: Use config.json
+      run: cat config.json
+        node -e "const config = require('./config.json'); console.log(config);"
 
     - name: Build
       run: npm run build
