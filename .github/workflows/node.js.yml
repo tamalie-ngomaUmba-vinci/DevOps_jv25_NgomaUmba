@@ -1,0 +1,32 @@
+name: Node.js Build
+
+on:
+  push:
+    branches: [ "tamalie-ngomaUmba-vinci-buildingBranch" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Use config.json
+      run: cat config.json
+        node -e "const config = require('config.json'); console.log(config);"
+
+    - name: Build
+      run: npm run build
