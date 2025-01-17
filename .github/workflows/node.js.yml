@@ -1,6 +1,8 @@
 name: Node.js Build
 
-on: [push]
+on:
+  push:
+    branches: [ "tamalie-ngomaUmba-vinci-buildingBranch" ]
 
 jobs:
   build:
